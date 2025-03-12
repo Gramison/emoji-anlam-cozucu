@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Anlam Çözücü</title>
+</head>
+<body>
+    <h1>Emoji Anlam Çözücü</h1>
+    <p>Bir emoji girin:</p>
+    <input type="text" id="emojiInput" placeholder="😊, 😂, 🧑‍💻 vb.">
+    <button onclick="showMeaning()">Anlamı Göster</button>
+
+    <h2>Emoji Anlamı:</h2>
+    <p id="meaning"></p>
+
+    <script>
+        function showMeaning() {
+            var emoji = document.getElementById('emojiInput').value;
+            var meaning = "";
+
+            switch (emoji) {
+                case "😊":
+                    meaning = "Gülümseme, mutluluk ve memnuniyet ifade eder.";
+                    break;
+                case "😂":
+                    meaning = "Gülme, eğlence veya komik bir şey ifade eder.";
+                    break;
+                case "🧑‍💻":
+                    meaning = "Bilgisayar başında çalışan birini simgeler.";
+                    break;
+                default:
+                    meaning = "Bu emoji için anlam bulunamadı.";
+                    break;
+            }
+
+            document.getElementById('meaning').innerText = meaning;
+        }
+    </script>
+</body>
+</html>
